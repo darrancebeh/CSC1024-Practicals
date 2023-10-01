@@ -46,7 +46,7 @@ def question_4():
     if dataUsage <= 10:
         dataCharge = dataUsage * 15;
     else:
-        dataCharge = dataUsage * 30;
+        dataCharge = (((dataUsage-10) * 30) + 150);
 
     print(f"Your Monthly Data Usage is {dataUsage}GB. Your Total Data Charges This Month Would Be RM{dataCharge}.");
 
