@@ -205,7 +205,7 @@ def question_10():
 #Simply remove the '#' in front of the function name to run the solution for the respective question.
 
 #question_7();
-#question_8();
+question_8();
 #question_9();
 #question_10();
 
