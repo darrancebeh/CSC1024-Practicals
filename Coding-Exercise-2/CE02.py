@@ -101,3 +101,112 @@ def question_6():
 #question_6();
 
 # - DARRANCE BEH HENG SHEK :)
+
+
+# Extra Questions
+
+
+def question_7():
+#I think something is wrong with this question with the wording :(
+    cookiesNum = int(input("Please Input the Total Number of Cookies: "));
+    cookiesPerBox = int(input("Please Input the Number of Cookies Per Box: "));
+    cookiesContainers = int(input("Please Input the Number of Cookies Per Container: "));
+
+    cookiesPerBoxConst = 24;
+    boxesPerContainerConst = 75;
+
+    finalBoxNum = cookiesNum // cookiesPerBoxConst;
+    finalContainerNum = finalBoxNum // boxesPerContainerConst;
+
+    cookiesLeftover = cookiesNum % cookiesPerBoxConst;
+    boxesLeftover = finalBoxNum % boxesPerContainerConst;
+
+    print(f"The Number of Boxes Needed is {finalBoxNum}.");
+    print(f"The Number of Containers Needed is {finalContainerNum}.");  
+
+    print(f"Leftover Cookies: {cookiesLeftover}.");
+    print(f"Leftover Boxes: {boxesLeftover}.");
+
+
+def question_8():
+    num1 = int(input("Please Input the First Number: "));
+    op = input("Please Input the Operator: ");
+    num2 = int(input("Please Input the Second Number: "));
+
+    if op == '+':
+        print(f"{num1} {op} {num2} = {num1+num2}");
+    elif op == '-':
+        print(f"{num1} {op} {num2} = {num1-num2}");
+    elif op == '*':
+            print(f"{num1} {op} {num2} = {num1*num2}");
+    elif op == '/':
+        print(f"{num1} {op} {num2} = {num1/num2}");
+    elif op == "**":
+        print(f"{num1} {op} {num2} = {num1**num2}");
+    else:
+        print("Invalid Operator.");
+
+
+def question_9():
+    netPrice = int(input("Please Input the Net Price: "));
+    estNumber = int(input("Please Input the Estimated Number of Sales: "));
+
+    royalties1 = 5000 + 20000;
+
+    # the author is paid 12.5% of the net price of the novel for each copy of the novel sold
+    royalties2 = netPrice * 0.125 * estNumber;
+
+    # the author is paid 10% of the net price for the first 4,000 copies sold, and 14% of the net price for the copies sold over 4,000. 
+    royalties3 = (netPrice * 0.1 * 4000) + (netPrice * 0.14 * (estNumber - 4000));
+
+    print(f"Royalties for Option 1: RM{royalties1}");
+    print(f"Royalties for Option 2: RM{royalties2}");
+    print(f"Royalties for Option 3: RM{royalties3}");
+
+    #find largest royalties
+    if royalties1 > royalties2 and royalties1 > royalties3:
+        print("Option 1 is the best option.");
+    elif royalties2 > royalties1 and royalties2 > royalties3:
+        print("Option 2 is the best option.");
+    elif royalties3 > royalties1 and royalties3 > royalties2:
+        print("Option 3 is the best option.");
+    else:
+        print("There is no best option.");
+
+
+def question_10():
+    hotelRentalPrice = 100;
+
+    rentingCost = int(input("Please Input the Cost of Renting a Room: "));
+
+    totalRoomsBooked = int(input("Please Input the Total Number of Rooms Booked: "));
+
+    daysOfBooking = int(input("Please Input the Number of Days of Rental: "));
+
+    salesTax = int(input("Please Input the Sales Tax, in percentage: "));
+    salesTaxPercentageToDecimal = salesTax/100;
+
+    #If the number of rooms booked is at least 10, the discount is 10%
+    if totalRoomsBooked >= 10:
+        discount = 0.1;
+    elif totalRoomsBooked >= 20:
+        discount = 0.2;
+    elif totalRoomsBooked >= 30:
+        discount = 0.3;
+    else:
+        discount = 0;
+
+    finalPricePerRoom = (rentingCost * daysOfBooking) * (1 - discount);
+    print(f"The Final Price Per Room is RM{finalPricePerRoom}.");
+    print(f"Total Discount is {discount*100}%.")
+    print(f"Total Cost is RM{finalPricePerRoom * totalRoomsBooked}.");
+    print(f"Total Billed incl. Tax: RM{(finalPricePerRoom * totalRoomsBooked) * (1 + salesTaxPercentageToDecimal)}.");
+
+#Simply remove the '#' in front of the function name to run the solution for the respective question.
+
+#question_7();
+#question_8();
+#question_9();
+#question_10();
+
+# - DARRANCE BEH HENG SHEK
