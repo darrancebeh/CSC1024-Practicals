@@ -16,7 +16,6 @@ def question_1():
     print(f"The Total Cost for Rental is: ${(newVideos * newVideosTime * 3) + (oldies * oldiesTime * 2)}.");
 
 def question_2():
-#Just a Math Question :)
     seconds = int(input("Enter the number of seconds: "));
     hours = seconds // 3600;
     minutes = (seconds % 3600) // 60;
@@ -41,7 +40,6 @@ def question_3():
     print(f"Your Income is RM{income}. Your Total Taxes Would Be RM{tax}.");
 
 def question_4():
-#Just buy unlimited data lah
     dataUsage = int(input("Please Input your Monthly Data Usage in GB: "));
     if dataUsage <= 10:
         dataCharge = dataUsage * 15;
@@ -51,8 +49,6 @@ def question_4():
     print(f"Your Monthly Data Usage is {dataUsage}GB. Your Total Data Charges This Month Would Be RM{dataCharge}.");
 
 def question_5():
-#This type of question again walao
-
     #Pro tip - add .lower() to the end of input() to make it case-insensitive :) ( helps with the if statements A LOT )
     choice = input("Please Input your Choice of Polygon Area to Calculate\n('R' or 'r' for Rectangle; 'C' or 'c' for Circle.): ").lower();
 
@@ -67,7 +63,6 @@ def question_5():
 
 
 def question_6():
-#wtf is this question
 # if you're getting errors, please update python to 3.10.0 or above :)
 # fyi, you dont need "break" statements for switch cases in python; you need it for most other languages though :)
     day = int(input("Input the Day of the Week (1-7): "));
@@ -89,18 +84,6 @@ def question_6():
             print("Today's Drink of the Day is Gingerbread Latte.");
         case _:
             print("I am too lazy to error check this. Please input a number between 1 and 7. :)")
-    #no caramel macchiato :(
-
-#Simply remove the '#' in front of the function name to run the solution for the respective question.
-
-#question_1();
-#question_2();
-#question_3();
-#question_4();
-#question_5();
-#question_6();
-
-# - DARRANCE BEH HENG SHEK :)
 
 
 # Extra Questions
@@ -186,7 +169,7 @@ def question_10():
     salesTax = int(input("Please Input the Sales Tax, in percentage: "));
     salesTaxPercentageToDecimal = salesTax/100;
 
-    #If the number of rooms booked is at least 10, the discount is 10%
+    #If the number of rooms booked is at least 10, the discount is 10, etc....
     if totalRoomsBooked >= 10:
         discount = 0.1;
     elif totalRoomsBooked >= 20:
@@ -201,11 +184,18 @@ def question_10():
     print(f"Total Discount is {discount*100}%.")
     print(f"Total Cost is RM{finalPricePerRoom * totalRoomsBooked}.");
     print(f"Total Billed incl. Tax: RM{(finalPricePerRoom * totalRoomsBooked) * (1 + salesTaxPercentageToDecimal)}.");
+    
 
 #Simply remove the '#' in front of the function name to run the solution for the respective question.
 
+#question_1();
+#question_2();
+#question_3();
+#question_4();
+#question_5();
+#question_6();
 #question_7();
-question_8();
+#question_8();
 #question_9();
 #question_10();
 
