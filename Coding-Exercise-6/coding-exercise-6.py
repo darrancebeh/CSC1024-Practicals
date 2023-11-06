@@ -76,11 +76,8 @@ def question5():
     print(f"my_list = {myList}");
 
 def question6():
-    # OUTPUT DOES NOT FIT WITH GIVEN SAMPLE OUTPUT
-    # EITHER I UNDERSTOOD THE QUESTION WRONGLY OR THE QUESTION IS WRONG
     myList = [];
     popList = [];
-    flag = 0;
 
     i = 0;
     while(i != 5):
