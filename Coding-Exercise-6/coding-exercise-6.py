@@ -76,10 +76,8 @@ def question5():
     print(f"my_list = {myList}");
 
 def question6():
-    # OUTPUT DOES NOT FIT WITH GIVEN SAMPLE OUTPUT
-    # EITHER I UNDERSTOOD THE QUESTION WRONGLY OR THE QUESTION IS WRONG
     myList = [];
-    flag = 0;
+    popList = [];
 
     i = 0;
     while(i != 5):
@@ -87,12 +85,17 @@ def question6():
         myList.append(data);
         i += 1;
 
-    for _ in range(len(myList)):
-        for i in myList:
-            if(myList.index(i) % 2 == 0):
-                flag = myList.index(i);
-        print(f"my_list = {myList}")
-        myList.pop(flag);
+    for i in myList:
+        if(myList.index(i) % 2 == 0):
+            popList.append(myList.index(i));
+    popList.sort(reverse=True);
+
+    print(f"my_list = {myList}");
+
+    for i in popList:
+        myList.pop(i);
+        print(f"my_list = {myList}");
+
 
 
 #question1();
