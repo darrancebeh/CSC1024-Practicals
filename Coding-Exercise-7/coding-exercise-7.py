@@ -7,11 +7,13 @@ def question1():
     for i in range(1, 13):
         print(f"1 x {num} = {i * num}")
 
+
 def question2():
     num = int(input("Enter a number below 50: "));
 
     for i in range(50, num - 1, -1):
         print(i);
+
 
 def question3():
     direction = input("Enter direction to count (up/down): ").lower();
@@ -28,8 +30,8 @@ def question3():
         for i in range(20, num - 1, -1):
             print(i);
 
-def question4():
 
+def question4():
     score = 0 ;
     for i in range(0,5):
         num1 = random.randint(1,100);
@@ -50,9 +52,7 @@ def question4():
 
 
 def question5():
-
     #Same code as question 4 because I used for-loop to begin with
-
     score = 0 ;
     for i in range(0,5):
         num1 = random.randint(1,100);
@@ -70,6 +70,7 @@ def question5():
 
     print("\n\nQuiz Over!");
     print(f"Your score is {score} out of 5");
+    
 
 def question6():
     my_list = [];
@@ -86,10 +87,8 @@ def question6():
     for item in my_list:
         if item > ceiling:
             ceiling = item;
-        elif item < floor:
+        if item < floor:
             floor = item;
-        else:
-            pass;
 
     print(f"\n\nmy_list = {my_list}");
     print(f"\nMaximum Number: {ceiling}");
