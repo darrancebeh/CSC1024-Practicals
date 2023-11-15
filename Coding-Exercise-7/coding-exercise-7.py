@@ -87,7 +87,7 @@ def question6():
     for item in my_list:
         if item > ceiling:
             ceiling = item;
-        if item < floor:
+        elif item < floor:
             floor = item;
 
     print(f"\n\nmy_list = {my_list}");
