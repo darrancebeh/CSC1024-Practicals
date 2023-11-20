@@ -2,7 +2,8 @@ def getRadius(center, point):
     return (point - center);
 
 def getDiameter(center, point):
-    return (getRadius(center, point) * 2);
+    diameter = (point - center) * 2
+    return (diameter);
 
 def getCircumference(radius):
     return (2 * 3.14 * radius);
@@ -10,9 +11,8 @@ def getCircumference(radius):
 def getArea(radius):
     return (3.14 * radius ** 2);
 
-
 center = int(input("Enter the center of the circle: "));
-point = int("Enter the point on the circle: ");
+point = int(input("Enter the point on the circle: "));
 
 radius = getRadius(center, point);
 diameter = getDiameter(center, point);
